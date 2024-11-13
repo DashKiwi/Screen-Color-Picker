@@ -1,3 +1,4 @@
+# Imports
 from screeninfo import get_monitors
 from pynput.mouse import Controller
 from PIL import Image
@@ -6,8 +7,10 @@ import mss
 import pyperclip
 import os
 
+# Global Variables
 HOTKEY = "ctrl+alt+c"
 
+# Functions
 def get_color(coordX, coordY):
     monitors = get_monitors()
     for monitor in monitors:
@@ -41,6 +44,7 @@ def on_hotkey_press():
     print(f"RGB: {', '.join(str(i) for i in color)}")
     pyperclip.copy(hex_color)
 
+# Start
 keyboard.add_hotkey(HOTKEY, on_hotkey_press)
 os.system('cls||clear & title Screen Color Picker')
 print(f"Point your mouse cursor at anywhere on the screen, hit {HOTKEY.upper()}")
