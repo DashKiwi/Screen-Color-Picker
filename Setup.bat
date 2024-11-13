@@ -7,4 +7,5 @@ if not "%1"=="am_admin" (
 pip install keyboard
 pip install pyscreenshot
 pip install pyperclip
-pip install ctypes
+pip install screeninfo
+pip install pynput
